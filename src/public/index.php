@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>お問い合わせフォーム</title>
+    <title>PHP簡易掲示板</title>
 </head>
 
 <body>
-    <h1>お問い合わせフォーム</h1>
+    <h1>入力欄</h1>
     <form action="submit.php" method="POST">
         <p>名前：<input type="text" name="name" required></p>
         <p>メッセージ：<textarea name="message" required></textarea></p>
