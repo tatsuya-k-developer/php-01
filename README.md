@@ -188,22 +188,6 @@ http://localhost:8080
 
 `phpinfo()` が表示されればOK。
 
----
-
-## 🧹 9. Laravelを使いたい場合（オプション）
-
-```bash
-docker-compose exec app composer create-project laravel/laravel .
-```
-
-→ `public` ディレクトリが Laravel 用に上書きされます。
-
-権限調整：
-
-```bash
-docker-compose exec app chmod -R 775 storage bootstrap/cache
-docker-compose exec app chown -R app:app storage bootstrap/cache
-```
 
 ---
 
@@ -219,13 +203,4 @@ docker-compose exec app chown -R app:app storage bootstrap/cache
 
 ---
 
-## 📦 今後の拡張ポイント（任意）
 
-* Let's Encrypt を使った HTTPS（nginx + certbot）
-* Laravelのスケジューラやキューを Supervisor で常駐化
-* CI/CD で自動デプロイ（GitHub Actionsなど）
-* phpMyAdmin を別サービスとして追加
-
----
-
-必要に応じて、Laravel対応、CI/CD連携、SSL対応なども詳細にご案内できます。ご希望があればお知らせください。
