@@ -74,6 +74,8 @@ services:
     volumes:
       - db-data:/var/lib/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
@@ -154,26 +156,6 @@ CREATE TABLE posts (
 SHOW VARIABLES LIKE 'time_zone';
 -- 結果: +09:00
 ```
-
----
-
-## 7️⃣ DBeaver から接続する方法
-
-| 設定項目    | 値                   |
-|-------------|----------------------|
-| ホスト      | `localhost`          |
-| ポート      | `3306`               |
-| ユーザー名  | `root`               |
-| パスワード  | `rootpassword`       |
-| データベース | `myapp`（任意）       |
-
-必要に応じて `docker-compose.yml` に以下を追加：
-
-```yaml
-    ports:
-      - "3306:3306"
-```
-
 ---
 
 ## ✅ 動作確認
